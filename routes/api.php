@@ -19,10 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Rotas para gerenciamento de clientes
-Route::post('/cliente', [ClienteController::class, 'store']); // Cadastro de novo cliente
-Route::put('/cliente/{id}', [ClienteController::class, 'update']); // Edição de um cliente existente
-Route::delete('/cliente/{id}', [ClienteController::class, 'destroy']); // Remoção de um cliente existente
-Route::get('/cliente/{id}', [ClienteController::class, 'show']); // Consulta de dados de um cliente
-Route::get('/consulta/final-placa/{numero}', [ClienteController::class, 'consultaPorFinalPlaca']); // Consulta por final de placa
+Route::post('/cliente', [ClienteController::class, 'store']); 
+Route::put('/cliente/{id}', [ClienteController::class, 'update']); 
+Route::delete('/cliente/{id}', [ClienteController::class, 'destroy']); 
+Route::get('/cliente/{id}', [ClienteController::class, 'show']); 
+Route::get('/consulta/final-placa/{numero}', [ClienteController::class, 'consultaPorFinalPlaca']); 
 
